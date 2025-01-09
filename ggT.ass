@@ -1,0 +1,16 @@
+in a
+in b
+ld a :start
+cmp b
+jlt smaller
+jgt bigger
+jeq end
+ld b :smaller
+sub a
+st b
+jmp start
+sub b :bigger
+st a
+jmp start
+out a :end
+end
