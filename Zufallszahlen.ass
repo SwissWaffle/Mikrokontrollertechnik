@@ -1,0 +1,15 @@
+;Nicolas Weber 16.01.2025
+;Dieser Code ist zu erzeugung von Zufallszahlen
+ld 233
+;
+st a
+ld a :repeat
+mul 31
+add 17
+mod 256
+st a
+out a
+jmp repeat
+;obriger abschitt ist zur berechnung von der Zufallszahl
+;die berechnung lautet X=(31*X+17)mod256
+end
