@@ -1,0 +1,24 @@
+;Nicolas Weber 16.01.2025
+;Hier handelt es sich um den gemeinsam grössten Teiler zu finden
+in a
+in b
+;
+ld a :start
+cmp b
+;
+jlt smaller
+jgt bigger
+;im oberen Teil wird geschaut ob a < b oder a > b
+jeq end
+;
+ld b :smaller
+sub a
+st b
+jmp start
+;es wird b=b-a gerechnet
+sub b :bigger
+st a
+jmp start
+;es wird a=a-b gerechnet
+out a :end
+end
